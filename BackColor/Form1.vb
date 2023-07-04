@@ -24,7 +24,7 @@
     End Sub
 
     Private Sub btnC_Click(sender As Object, e As EventArgs) Handles btnC.Click
-        Dim k As Single, eng As Single, m As Single, t As Single, avg As Integer
+        Dim k As Single, eng As Single, m As Single, t As Single, avg As Double
         k = Val(txtK.Text)
         m = Val(txtM.Text)
         eng = Val(txtE.Text)
@@ -32,7 +32,7 @@
         avg = t / 3
 
         lblT.Text = t.ToString
-        lblA.Text = avg.ToString
+        lblA.Text = avg.ToString("0.00")
         If avg >= 70 And avg <= 100 Then
             lblG.Text = "A"
             lblR.Text = "Pass"
